@@ -103,7 +103,15 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  // Attempt to translate previous Psuedocode greedy algorithm; will modify as necessary.
+i = 0;
+var unitLengths [1000, 100, 1];
+var unitCounts [0, 0, 0];
+while centimeters != 0 AND centimeters > unitLengths[i]{
+  centimeters = centimeters - unitLengths[i];
+  unitCounts[i] = unitCounts[i]++;
+  i++;
+}
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
