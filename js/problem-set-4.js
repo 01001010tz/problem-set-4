@@ -3,9 +3,8 @@
  */
 
 function hello() {
-
-  // WRITE YOUR EXERCISE 1 CODE HERE
-
+var HelloText = document.getElementById("output1");
+HelloText.innerHTML = "Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
@@ -16,13 +15,12 @@ function hello() {
  */
 
 function helloAgain() {
-
   //////////// DO NOT MODIFY      Use the @name variable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
-
-  // WRITE YOUR EXERCISE 2 CODE HERE
-
+  name = prompt("What's your name?");
+  var HelloAgainText = document.getElementById("output2");
+  HelloAgainText.innerHTML = "Hello, " + name + "!";
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -33,16 +31,14 @@ function helloAgain() {
  */
 
 function celsius() {
-
   //////////////////////////////////////////////////////// DO NOT MODIFY
   let cels = ((Math.random() * 1001) - 100).toFixed(2); // DO NOT MODIFY
   //////////////////////////////////////////////////////// DO NOT MODIFY
-
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-
-  // WRITE YOUR EXERCISE 3 CODE HERE
-
+  fahrenheit = ((cels * 1.8) + 32).toFixed(2);
+  var FOutput = document.getElementById("output3");
+  FOutput.innerHTML = cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -53,16 +49,14 @@ function celsius() {
  */
 
 function fahrenheit() {
-
   //////////////////////////////////////////////////////// DO NOT MODIFY
   let fahr = ((Math.random() * 1001) - 100).toFixed(2); // DO NOT MODIFY
   //////////////////////////////////////////////////////// DO NOT MODIFY
-
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-
-  // WRITE YOUR EXERCISE 4 CODE HERE
-
+  celsius = ((fahr-32)/1.8).toFixed(2);
+  var COutput = document.getElementById("output4");
+  COutput.innerHTML = fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
