@@ -3,7 +3,7 @@
  */
 
 function hello() {
-var HelloText = document.getElementById("output1");
+let HelloText = document.getElementById("output1");
 HelloText.innerHTML = "Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -19,7 +19,7 @@ function helloAgain() {
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
   name = prompt("What's your name?");
-  var HelloAgainText = document.getElementById("output2");
+  let HelloAgainText = document.getElementById("output2");
   HelloAgainText.innerHTML = "Hello, " + name + "!";
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -37,7 +37,7 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
   fahrenheit = ((cels * 1.8) + 32).toFixed(2);
-  var FOutput = document.getElementById("output3");
+  let FOutput = document.getElementById("output3");
   FOutput.innerHTML = cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -55,7 +55,7 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
   celsius = ((fahr-32)/1.8).toFixed(2);
-  var COutput = document.getElementById("output4");
+  let COutput = document.getElementById("output4");
   COutput.innerHTML = fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -98,21 +98,14 @@ function centimeters() {
 
   // You are free to modify the value of centimeters, which you'll
   // likely need to do. Please do not modify the value of input.
-
   /////////////////////////// DO NOT MODIFY
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
-
-  // Attempt to translate previous Psuedocode greedy algorithm; will modify as necessary.
-i = 0;
-var unitLengths [1000, 100, 1];
-var unitCounts [0, 0, 0];
-while centimeters != 0 AND centimeters > unitLengths[i]{
-  centimeters = centimeters - unitLengths[i];
-  unitCounts[i] = unitCounts[i]++;
-  i++;
-}
-
+let kmCount = Math.floor(centimeters/100000);
+let mCount = Math.floor((centimeters - (kmCount* 100000))/100);
+let cmCount = centimeters - (kmCount * 100000) - (mCount * 100);
+let MetricCounts = document.getElementById("output6");
+MetricCounts.innerHTML = "Kilometers: " + kmCount + "<br/>Meters: "+ mCount + "<br/>Centimeters: "+ cmCount;
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
