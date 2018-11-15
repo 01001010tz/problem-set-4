@@ -78,9 +78,12 @@ function inches() {
   ////////////////////// DO NOT MODIFY
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-
-  // WRITE YOUR EXERCISE 5 CODE HERE
-
+let milesCount = Math.floor(inches/63360);
+let yardsCount = Math.floor((inches - (milesCount* 63360))/36);
+let feetCount =  Math.floor((inches - (milesCount * 63360) - (yardsCount * 36))/ 12);
+let inchCount = inches - (milesCount * 63360) - (yardsCount * 36) - (feetCount * 12);
+let InchesProblemCounts = document.getElementById("output5");
+InchesProblemCounts.innerHTML = "Miles: " + milesCount + "<br/>Yards : " + yardsCount + "<br/>Feet: " + feetCount + "<br/>Inches: " + inchCount;
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -128,8 +131,13 @@ function fluidOunces() {
   let fluidOunces = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
-
+let gallonCount = Math.floor(fluidOunces/128);
+let quartCount = Math.floor((fluidOunces - (gallonCount * 128))/32);
+let pintCount = Math.floor((fluidOunces - (gallonCount * 128) - (quartCount * 32))/16);
+let cupCount = Math.floor((fluidOunces - (gallonCount * 128) - (quartCount * 32) - (pintCount * 16))/8);
+let flozCount = fluidOunces - (gallonCount * 128) - (quartCount * 32) - (pintCount * 16) - (cupCount * 8);
+let FluidOunceCounts = document.getElementById("output7");
+FluidOunceCounts.innerHTML = "Gallons: " + gallonCount + "<br/>Quarts: " + quartCount + "<br/>Pints: " + pintCount + "<br/>Cups: " + cupCount + "<br/>Fluid Ounces: " + flozCount;
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -151,9 +159,11 @@ function ounces() {
   ////////////////////// DO NOT MODIFY
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-
-  // WRITE YOUR EXERCISE 8 CODE HERE
-
+let tonCount = Math.floor(ounces/32000);
+let poundCount = Math.floor((ounces - (kmCount* 32000))/16);
+let ounceCount = ounces - (tonCount * 32000) - (poundCount * 16);
+let OuncesCounts = document.getElementById("output8");
+OuncesCounts.innerHTML = "Tons: " + tonCount + "<br/>Pounds: "+ poundCount + "<br/>Ounces: "+ ounceCount;
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -199,9 +209,13 @@ function change() {
   ////////////////////// DO NOT MODIFY
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-
-  // WRITE YOUR EXERCISE 10 CODE HERE
-
+let amount = amount * 100;
+let quarterCount = Math.floor((amount/25);
+let dimeCount = Math.floor((amount - (quartercount* 25))/10);
+let nickelCount =  Math.floor((amount - (quartercount * 25) - (dimecount * 10))/ 5);
+let pennyCount = amount - (quartercount * 25) - (dimecount * 10) - (nickelcount * 5);
+let Change = document.getElementById("output10");
+Change.innerHTML = "Quarters: " + quarterCount + "<br/>Dimes : " + dimeCount + "<br/>Nickels: " + nickelCount + "<br/>Pennies: " + pennyCount;
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
