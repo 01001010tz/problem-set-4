@@ -185,8 +185,13 @@ function money() {
   /////////////////////// DO NOT MODIFY
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
-
-  // WRITE YOUR EXERCISE 9 CODE HERE
+let DollarCount = Math.floor(pennies/100);
+let quarterCount = Math.floor((pennies - (DollarCount * 100))/25);
+let dimeCount = Math.floor((pennies - (DollarCount * 128) - (quarterCount * 25))/10);
+let nickelCount = Math.floor((pennies - (DollarCount * 128) - (quarterCount * 25) - (dimeCount * 10))/5);
+let pennyCount = pennies - (DollarCount * 100) - (quarterCount * 25) - (dimeCount * 10) - (nickelCount * t);
+let MoneyCounts = document.getElementById("output9");
+MoneyCounts.innerHTML= "Dollars: " + DollarCount + "<br/>Quarters: " + quarterCount + "<br/>Dimes: " dimeCount + "<br/>Nickels: " + nickelCount + "Pennies: " + pennyCount; 
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
