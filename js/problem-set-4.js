@@ -4,7 +4,7 @@
 
 function hello() {
 let HelloText = document.getElementById("output1");
-HelloText.innerHTML = "Hello, AP Computer Science Principles!";
+HelloText.innerHTML = ("Hello, AP Computer Science Principles!");
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
@@ -36,7 +36,7 @@ function celsius() {
   //////////////////////////////////////////////////////// DO NOT MODIFY
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-  fahrenheit = ((cels * 1.8) + 32).toFixed(2);
+  let fahrenheit = ((cels * 1.8) + 32).toFixed(2);
   let FOutput = document.getElementById("output3");
   FOutput.innerHTML = cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
@@ -54,7 +54,7 @@ function fahrenheit() {
   //////////////////////////////////////////////////////// DO NOT MODIFY
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
-  celsius = ((fahr-32)/1.8).toFixed(2);
+  let celsius = ((fahr-32)/1.8).toFixed(2);
   let COutput = document.getElementById("output4");
   COutput.innerHTML = fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
@@ -83,7 +83,7 @@ let yardsCount = Math.floor((inches - (milesCount* 63360))/36);
 let feetCount =  Math.floor((inches - (milesCount * 63360) - (yardsCount * 36))/ 12);
 let inchCount = inches - (milesCount * 63360) - (yardsCount * 36) - (feetCount * 12);
 let InchesProblemCounts = document.getElementById("output5");
-InchesProblemCounts.innerHTML = "Miles: " + milesCount + "<br/>Yards : " + yardsCount + "<br/>Feet: " + feetCount + "<br/>Inches: " + inchCount;
+InchesProblemCounts.innerHTML = "Miles: " + milesCount + "<br/>Yards: " + yardsCount + "<br/>Feet: " + feetCount + "<br/>Inches: " + inchCount;
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -160,7 +160,7 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 let tonCount = Math.floor(ounces/32000);
-let poundCount = Math.floor((ounces - (kmCount* 32000))/16);
+let poundCount = Math.floor((ounces - (tonCount* 32000))/16);
 let ounceCount = ounces - (tonCount * 32000) - (poundCount * 16);
 let OuncesCounts = document.getElementById("output8");
 OuncesCounts.innerHTML = "Tons: " + tonCount + "<br/>Pounds: "+ poundCount + "<br/>Ounces: "+ ounceCount;
@@ -189,9 +189,9 @@ let DollarCount = Math.floor(pennies/100);
 let quarterCount = Math.floor((pennies - (DollarCount * 100))/25);
 let dimeCount = Math.floor((pennies - (DollarCount * 128) - (quarterCount * 25))/10);
 let nickelCount = Math.floor((pennies - (DollarCount * 128) - (quarterCount * 25) - (dimeCount * 10))/5);
-let pennyCount = pennies - (DollarCount * 100) - (quarterCount * 25) - (dimeCount * 10) - (nickelCount * t);
+pennyCount = pennies - (DollarCount * 100) - (quarterCount * 25) - (dimeCount * 10) - (nickelCount * 5);
 let MoneyCounts = document.getElementById("output9");
-MoneyCounts.innerHTML= "Dollars: " + DollarCount + "<br/>Quarters: " + quarterCount + "<br/>Dimes: " dimeCount + "<br/>Nickels: " + nickelCount + "Pennies: " + pennyCount; 
+MoneyCounts.innerHTML= "Dollars: " + DollarCount + "<br/>Quarters: " + quarterCount + "<br/>Dimes: " + dimeCount + "<br/>Nickels: " + nickelCount + "<br>Pennies: " + pennyCount;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -214,13 +214,14 @@ function change() {
   ////////////////////// DO NOT MODIFY
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-let amount = amount * 100;
-let quarterCount = Math.floor((amount/25);
-let dimeCount = Math.floor((amount - (quartercount* 25))/10);
-let nickelCount =  Math.floor((amount - (quartercount * 25) - (dimecount * 10))/ 5);
-let pennyCount = amount - (quartercount * 25) - (dimecount * 10) - (nickelcount * 5);
+amount = amount * 100;
+let quarterCount = Math.floor(amount/25);
+let dimeCount = Math.floor((amount - (quarterCount* 25))/10);
+let nickelCount =  Math.floor((amount - (quarterCount * 25) - (dimeCount * 10))/ 5);
+let pennyCount = Math.floor(amount - (quarterCount * 25) - (dimeCount * 10) - (nickelCount * 5));
+let coinsCount = quarterCount + dimeCount + nickelCount + pennyCount;
 let Change = document.getElementById("output10");
-Change.innerHTML = "Quarters: " + quarterCount + "<br/>Dimes : " + dimeCount + "<br/>Nickels: " + nickelCount + "<br/>Pennies: " + pennyCount;
+Change.innerHTML = coinsCount + " coins.";
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
